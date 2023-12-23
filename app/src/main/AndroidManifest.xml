@@ -11,10 +11,10 @@
         android:label="HafizApps"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.LatihanAPP7"
+        android:theme="@style/Theme.HafizApps"
         tools:targetApi="31">
         <activity
-            android:name="com.hafizapps.SplashScreen_Activity"
+            android:name=".SplashScreen_Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,16 +22,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.HafizApps.Main_Activity" android:exported="true"/>
-        <activity android:name="com.hafizapps.fragment.ViewPagerActivity" android:exported="true"/>
-        <activity android:name="com.hafizapps.ScrollingIceCold" android:exported="true" />
-        <activity android:name="com.HafizApps.fibonacci.activity_fibonacci" android:exported="true" />
-        <activity android:name="com.hafizapps.Hallo_Activity" android:exported="true" />
-        <activity android:name="com.HafizApps.First_Activity" android:exported="true" />
-        <activity android:name="com.HafizApps.Second_Activity" android:exported="true" />
-        <activity android:name="com.HafizApps.Sinopsis.Sinopsis1" android:exported="true" >
-
-        </activity>
+        <activity android:name=".MainActivity" android:exported="true"/>
+        <activity android:name=".fragment.ViewPagerActivity" android:exported="true"/>
+        <activity android:name=".ScrollingIceCold" android:exported="true" />
+        <activity android:name=".Fibonacci" android:exported="true" />
+        <activity android:name=".HalloActivity" android:exported="true" />
+        <activity android:name=".Pesan.Activity1" android:exported="true" />
+        <activity android:name=".Pesan.Activity2" android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"

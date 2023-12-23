@@ -13,6 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Mikel.app"
+rootProject.name = "HafizApps"
+include(":app")
 include(":app")
  

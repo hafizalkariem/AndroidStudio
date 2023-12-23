@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Main_Activity">
+    tools:context=".MainActivity"
+    android:background="@color/black">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,27 +15,48 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
             android:gravity="center_horizontal"
             android:textSize="24dp"
-            android:text="Menu Program"
-            android:textColor="@color/white"
-            android:background="@color/darkvioled"/>
+            android:text="Pilihan Program"
+            android:textColor="@color/black"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textAlignment="gravity"
+            android:fontFamily="@font/montserrat_bold"
+            android:background="@color/black"/>
 
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:rowCount="1"
-            android:columnCount="3"
+            android:layout_height="520dp"
             android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false">
+            android:columnCount="3"
+            android:columnOrderPreserved="false"
+            android:rowCount="1">
+
             <!--Menu 1-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/hallo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -42,26 +64,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="vertical"
-                    android:gravity="center_horizontal"
                     android:padding="10dp">
+
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="30dp"
                         android:src="@drawable/hallo" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Hallo" />
+                        android:text="Hallo"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <!--Menu 2-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fibo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -69,28 +96,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical"
                     android:padding="10dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/fibonacci"/>
+                        android:src="@drawable/fibonacci" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fibonacci"/>
+                        android:text="Fibonacci"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <!--Menu3-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/scroll"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -98,28 +128,33 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical"
                     android:padding="10dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="30dp"
-                        android:src="@drawable/scrollingicecold"/>
+                        android:src="@drawable/scrollingicecold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="ScrollingIceCold"/>
+                        android:text="IceCold"
+                        android:textAlignment="center"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
+
             <!-- Menu 4-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/twoactivity"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -127,27 +162,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical"
                     android:padding="10dp">
+
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/message"/>
+                        android:src="@drawable/message" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Message"/>
+                        android:text="Message"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <!--Menu5-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/SetAlarm"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -155,27 +194,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical"
                     android:padding="10dp">
+
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/alarm"/>
+                        android:src="@drawable/alarm" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Alarm"/>
+                        android:text="Alarm"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <!--Menu 6-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/showmap"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -183,27 +226,31 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical"
                     android:padding="10dp">
+
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="40dp"
-                        android:src="@drawable/maps"/>
+                        android:src="@drawable/maps" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Maps"/>
+                        android:text="Maps"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
             <!--Menu 7-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/movie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
                 android:elevation="5dp"
                 app:cardCornerRadius="10dp"
                 app:cardUseCompatPadding="true">
@@ -211,23 +258,24 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
                     android:gravity="center_horizontal"
+                    android:orientation="vertical"
                     android:padding="10dp">
 
                     <ImageView
                         android:layout_width="50dp"
                         android:layout_height="32dp"
-                        android:src="@drawable/fragment"/>
+                        android:src="@drawable/fragment" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Movie"/>
+                        android:text="Movie"
+                        android:textSize="17dp"
+                        android:fontFamily="@font/montserrat_bold"/>
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
-
-
         </GridLayout>
     </LinearLayout>
 </ScrollView>

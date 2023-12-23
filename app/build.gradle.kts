@@ -1,16 +1,15 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "com.Mikelapp"
-    compileSdk = 34
+    namespace = "com.hafizapps"
+    compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.Mikelapp"
+        applicationId = "com.hafizapps"
         minSdk = 21
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
@@ -26,9 +25,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 }
 
