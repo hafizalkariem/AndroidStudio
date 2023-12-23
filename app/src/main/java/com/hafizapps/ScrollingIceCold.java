@@ -9,7 +9,7 @@ public class ScrollingIceCold extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scroolingicecold);
+        setContentView(R.layout.activity_scrollingicecold);
     }
 
 }

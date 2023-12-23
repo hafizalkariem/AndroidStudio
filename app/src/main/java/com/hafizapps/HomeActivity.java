@@ -3,14 +3,18 @@ package com.hafizapps;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
 import com.hafizapps.alarm.ActivityAlarm;
 import com.hafizapps.fragment.ViewPagerActivity;
 import com.hafizapps.Pesan.Activity1;
+import com.hafizapps.alarm.ActivityAlarm;
+import com.hafizapps.fragment.ViewPagerAdapter;
 
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
     CardView tombolSatu;
     CardView tombolDua;
     CardView tombolTiga;
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         tombolSatu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HalloActivity.class);
+                Intent intent = new Intent(HomeActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         tombolDua.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainCount.class);
+                Intent intent = new Intent(HomeActivity.this, MainCount.class);
                 startActivity(intent);
             }
         });
@@ -52,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         tombolTiga.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ScrollingIceCold.class);
+                Intent intent = new Intent(HomeActivity.this, ScrollingIceCold.class);
                 startActivity(intent);
             }
         });
@@ -61,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         tombolEmpat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ActivityAlarm.class);
+                Intent intent = new Intent(HomeActivity.this, ActivityAlarm.class);
                 startActivity(intent);
             }
         });
@@ -70,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         tombolLima.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Fibonacci.class);
+                Intent intent = new Intent(HomeActivity.this, Fibonacci.class);
                 startActivity(intent);
             }
         });
@@ -79,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         tombolEnam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Activity1.class);
+                Intent intent = new Intent(HomeActivity.this, Activity1.class);
                 startActivity(intent);
             }
         });
@@ -88,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         tombolTujuh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ActivityMap.class);
+                Intent intent = new Intent(HomeActivity.this, ActivityMap.class);
                 startActivity(intent);
             }
         });
@@ -97,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
         tombolDelapan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ViewPagerActivity.class);
+                Intent intent = new Intent(HomeActivity.this, ViewPagerAdapter.class);
                 startActivity(intent);
             }
         });
@@ -106,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         tombolSembilan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, HalloActivity.class);
+                Intent intent = new Intent(HomeActivity.this, HalloActivity.class);
                 startActivity(intent);
             }
         });

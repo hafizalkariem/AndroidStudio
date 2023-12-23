@@ -1,87 +1,88 @@
 package com.hafizapps;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.hafizapps.R;
+import androidx.core.content.ContextCompat;
 
 public class Fibonacci extends AppCompatActivity {
-    private Context context;
-    private int mCount = 0;
-    private TextView mShowCount;
+
+    private long fibMinus1 = 0;
+    private long fibMinus2 = 1;
+    private long currentFib = 0;
+    private TextView mShowFibonacci;
+    private long i = 0;
+
+    private long n = 0;
+    private long limit = 0; // Menyimpan batas Fibonacci yang diinginkan
+
+    private EditText mLimitInput;
 
     @Override
-    protected void onCreate(Bundle saveInstanceState) {
-        super.onCreate(saveInstanceState);
-        setContentView(R.layout.activity_fibonacci);
-        mShowCount = (TextView) findViewById(R.id.show_count);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_toast);
+        mShowFibonacci = (TextView) findViewById(R.id.show_count);
+        mLimitInput = (EditText) findViewById(R.id.limit_input);
+        updateFibonacciDisplay();
     }
 
-
-    private int fibonacci(int n) {
-        if (n <= 1) {
-            return n;
-        } else {
-            int fib1 = 0;
-            int fib2 = 1;
-            int result = 0;
-
-            for(int i = 2; i<= n; i++){
-                result= fib1+fib2;
-                fib1 = fib2;
-                fib2 =result;
-            }
-            return result;
+    public void countUp(View view) {
+        if (mLimitInput.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Enter the limit first", Toast.LENGTH_SHORT).show();
+            return;
         }
+
+        limit = Long.parseLong(mLimitInput.getText().toString());
+
+        if (n >= limit) {
+            Toast.makeText(this, "Fibonacci limit reached", Toast.LENGTH_SHORT).show();
+            return; // Hentikan perhitungan jika jumlah baris Fibonacci mencapai batas
+        }
+
+        long newFib = fibMinus1 + fibMinus2;
+        fibMinus2 = fibMinus1;
+        fibMinus1 = newFib;
+        currentFib = newFib;
+        n++; // Inkrementasi jumlah baris Fibonacci
+
+        updateFibonacciDisplay();
     }
-    public void showToast(View view){
-        String myString = "Hallo Toast";
-        Toast toast = Toast.makeText(getApplicationContext(), myString, Toast.LENGTH_LONG);
+
+
+
+    public void showFibonacci(View view) {
+        Toast toast = Toast.makeText(this, R.string.fibonacci_message, Toast.LENGTH_SHORT);
         toast.show();
     }
 
-    public void countUp(View view){
-//        Hitung nilai saat ini
-        int fibonacciValue = fibonacci(mCount);
+    public void reset(View view) {
+        currentFib = 0;
+        fibMinus2 = 1;
+        fibMinus1 = 0;
+        limit = 0;
+        n = 0;
+        mLimitInput.setText(""); // Mengosongkan input
+        updateFibonacciDisplay();
+    }
 
-//        Tambah nilai ke text
-        if(mShowCount != null){
-            mShowCount.setText(Integer.toString(fibonacciValue));
-//            ubah warna text
-            if (fibonacciValue %2 == 0){
-                mShowCount.setTextColor(getResources().getColor(R.color.black));
-            }else{
-                mShowCount.setTextColor(getResources().getColor(R.color.blue));
-            }
+    private void updateFibonacciDisplay() {
+        if (mShowFibonacci != null) {
+            mShowFibonacci.setText(Long.toString(currentFib));
+            mShowFibonacci.setTextColor(getFibonacciColor());
         }
-        mCount++;
-    }
-    public void resetCount(View view) {
-        mCount = 0;
-        mShowCount.setText("0");
-        mShowCount.setTextColor(getResources().getColor(R.color.black));
     }
 
-    public void calculateFibonacci(View view) {
-        EditText editTextN = findViewById(R.id.editTextN);
-        String nValue = editTextN.getText().toString();
-
-        if (!nValue.isEmpty()) {
-            int n = Integer.parseInt(nValue);
-            int fibonacciValue = fibonacci(n);
-
-            mShowCount.setText(String.valueOf(fibonacciValue));
-
-            // ubah warna text
-            if (fibonacciValue % 2 == 0) {
-                mShowCount.setTextColor(getResources().getColor(R.color.black));
-            } else {
-                mShowCount.setTextColor(getResources().getColor(R.color.blue));
-            }
+    private int getFibonacciColor() {
+        // Gantilah warna berdasarkan nilai Fibonacci
+        i++;
+        if (i % 2 == 0) {
+            return ContextCompat.getColor(this, R.color.gold);
+        } else {
+            return ContextCompat.getColor(this, R.color.colorPrimaryDark);
         }
     }
 }

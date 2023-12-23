@@ -14,7 +14,7 @@
         android:theme="@style/Theme.HafizApps"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen_Activity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,15 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" android:exported="true"/>
         <activity android:name=".fragment.ViewPagerActivity" android:exported="true"/>
         <activity android:name=".ScrollingIceCold" android:exported="true" />
+        <activity android:name=".MainCount" android:exported="true" />
         <activity android:name=".Fibonacci" android:exported="true" />
         <activity android:name=".HalloActivity" android:exported="true" />
         <activity android:name=".Pesan.Activity1" android:exported="true" />
         <activity android:name=".Pesan.Activity2" android:exported="true" />
+        <activity android:name=".alarm.ActivityAlarm" android:exported="true" />
+        <activity android:name=".ActivityMap" android:exported="true" />
 
         <meta-data
             android:name="preloaded_fonts"
